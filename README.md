@@ -4,7 +4,7 @@ A responsive and modern **E-commerce Website** built using **HTML**, **CSS**, an
 
 ---
 
-## 📸 Preview : https://lnkd.in/gV_ATURF
+## 📸 Preview : https://e-commerce-website-six-coral.vercel.app/
 
 ---
 
