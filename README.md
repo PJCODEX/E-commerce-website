@@ -32,8 +32,8 @@ ecommerce-website/
 │
 ├── js/
 │ ├── main.js # Script for homepage interactions
-│ ├── cart.js # Shopping cart logic
-│ └── product.js # Product detail logic
+│ 
+ 
 │
 ├── assets/
 │ ├── images/ # Product and UI images
