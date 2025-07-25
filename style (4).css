@@ -1,4 +1,4 @@
-/* Base styles */
+/* Default styles */
 * {
   margin: 0;
   padding: 0;
@@ -9,26 +9,21 @@ body {
   font-family: 'Spartan', sans-serif;
 }
 
-h1, h2, h4, h6 {
-  margin: 10px 0;
-}
-
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-ul {
-  list-style: none;
-}
-
 .logo {
   width: 100px;
 }
 
 #header {
-  background: #E3E6F3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 10px 50px;
+  background: #E3E6F3;
+}
+
+#navbar {
+  display: flex;
+  list-style: none;
 }
 
 #navbar li {
@@ -37,6 +32,7 @@ ul {
 }
 
 #navbar li a {
+  text-decoration: none;
   font-weight: 600;
   color: #1a1a1a;
 }
@@ -46,92 +42,184 @@ ul {
   color: #088178;
 }
 
+/* Hero section */
 #hero {
   background-image: url("img/hero4.png");
   height: 90vh;
+  width: 100%;
   background-size: cover;
   background-position: top 25% right 0;
+  padding: 0 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
 }
 
-#feature .fe-box {
-  padding: 20px;
+#hero h4,
+#hero h2,
+#hero h1,
+#hero p {
+  margin: 10px 0;
+}
+
+#hero button {
+  background-color: #088178;
+  color: #fff;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Features section */
+.section-p1 {
+  padding: 40px 80px;
+}
+
+.fe-box {
+  width: 180px;
+  text-align: center;
+  padding: 25px 15px;
   border: 1px solid #cce7d0;
   border-radius: 4px;
-  background: #fefefe;
-  transition: 0.3s;
+  margin: 15px;
 }
 
-#feature .fe-box:hover {
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-#feature .fe-box img {
+.fe-box img {
   width: 100%;
-  height: 100px;
-  object-fit: contain;
+  margin-bottom: 10px;
 }
 
-#product1 .pro {
+#feature {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Products section */
+.pro-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.pro {
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
   border: 1px solid #cce7d0;
-  border-radius: 4px;
-  padding: 10px;
-  background: #fff;
-  transition: 0.3s;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  margin: 15px 0;
+  transition: 0.3s ease;
+  position: relative;
 }
 
-#product1 .pro:hover {
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-#product1 .pro img {
+.pro img {
   width: 100%;
-  height: 250px;
-  object-fit: cover;
+  border-radius: 20px;
 }
 
-#product1 .des {
-  padding-top: 10px;
+.des {
+  text-align: start;
+  padding: 10px 0;
 }
 
-#product1 .cart {
+.des span {
+  color: #606063;
+  font-size: 12px;
+}
+
+.des h5 {
+  padding-top: 7px;
+  color: #1a1a1a;
+  font-size: 14px;
+}
+
+.star {
+  font-size: 12px;
+  color: #FFD700;
+}
+
+.pro h4 {
+  padding-top: 7px;
+  font-size: 15px;
+  font-weight: 700;
   color: #088178;
-  font-size: 20px;
 }
 
+.cart {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50px;
+  background-color: #e8f6ea;
+  font-weight: 500;
+  color: #088178;
+  border: 1px solid #cce7d0;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+}
+
+/* Banner */
 #banner {
   background-image: url("img/banner/b2.jpg");
+  width: 100%;
+  height: 40vh;
   background-size: cover;
   background-position: center;
+  text-align: center;
+  padding: 60px 0;
   color: #fff;
 }
 
-#newsletter {
-  background-image: url("img/banner/b14.png");
-  background-size: cover;
-  background-position: center;
-}
-
-#newsletter span {
+#banner h2 span {
   color: #ffbd27;
 }
 
-@media (max-width: 799px) {
-  #navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    position: absolute;
-    top: 70px;
-    right: 0;
-    background: #e3e6f3;
-    width: 200px;
-    display: none;
-  }
+.normal {
+  padding: 10px 20px;
+  border: none;
+  background-color: #088178;
+  color: white;
+  cursor: pointer;
+}
 
-  #hero {
-    text-align: center;
-  }
+/* Newsletter */
+#newsletter {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-image: url("img/banner/b14.png");
+  background-repeat: no-repeat;
+  background-position: 20% 30%;
+  background-color: #041e42;
+  padding: 40px 80px;
+  color: white;
+}
 
-  #newsletter form {
-    flex-direction: column;
-  }
+#newsletter .form {
+  display: flex;
+  width: 40%;
+}
+
+#newsletter input {
+  height: 3.125rem;
+  padding: 0 1.25rem;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+
+#newsletter button {
+  background-color: #088178;
+  color: #fff;
+  white-space: nowrap;
+  border-radius: 0 4px 4px 0;
 }
