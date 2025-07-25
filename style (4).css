@@ -294,9 +294,6 @@ button.white {
   color: #088178;
 }
 
-#product1 .pro {
-  position: relative; /* Ensure absolute child positions correctly */
-}
 
 #product1 .pro .cart {
   width: 45px;                /* Slightly larger for easier clicking */
@@ -314,11 +311,6 @@ button.white {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#product1 .pro .cart:hover {
-  background-color: #088178;  /* Darker background on hover */
-  color: #fff;                /* White icon/text on hover */
-  border-color: #088178;
-}
 
 @media (max-width: 600px) {
   #product1 .pro .cart {
