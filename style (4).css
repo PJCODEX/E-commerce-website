@@ -294,19 +294,40 @@ button.white {
   color: #088178;
 }
 
+#product1 .pro {
+  position: relative; /* Ensure absolute child positions correctly */
+}
+
 #product1 .pro .cart {
-  width: 40px;
-  height: 40px;
-  line-height: 40px;
-  border-radius: 50px;
+  width: 45px;                /* Slightly larger for easier clicking */
+  height: 45px;
+  line-height: 45px;
+  border-radius: 50%;         /* Perfect circle */
   background-color: #e8f6ea;
-  font-weight: 500;
+  font-weight: 600;           /* Slightly bolder */
   color: #088178;
   border: 1px solid #cce7d0;
   position: absolute;
   bottom: 20px;
   right: 10px;
+  cursor: pointer;            /* Pointer on hover */
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+#product1 .pro .cart:hover {
+  background-color: #088178;  /* Darker background on hover */
+  color: #fff;                /* White icon/text on hover */
+  border-color: #088178;
+}
+
+@media (max-width: 600px) {
+  #product1 .pro .cart {
+    width: 35px;
+    height: 35px;
+    line-height: 35px;
+    bottom: 15px;
+    right: 8px;
+  }
 
 /* Banner Section */
 #banner {
